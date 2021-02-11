@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
 
 $main-pink: rgb(245, 176, 187);
 $main-pink-trans: rgb(245, 176, 187, .95);
 $title-font: 'Gastromond-Regular', serif;
-$text-font: 'Open Sans', sans-serif;
+$text-font: 'Montserrat', sans-serif;
 $general-space-padding: 40px 4%;
 
 html {
@@ -30,10 +30,6 @@ h2 {
   font-size: 30px;
   font-weight: 400;
   margin-top: 0;
-}
-
-body.overlaid {
-  overflow: hidden;
 }
 
 section {
@@ -231,6 +227,7 @@ button, .landing__content__button {
 
     a {
       color: black;
+      text-decoration: none;
     }
 
 
@@ -257,6 +254,8 @@ button, .landing__content__button {
 
     h3 {
       margin-top: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
     }
 
     padding-bottom: 20px;
