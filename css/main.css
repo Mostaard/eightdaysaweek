@@ -107,7 +107,6 @@ button, .landing__content__button {
 }
 .about__content__item {
   width: 30%;
-  cursor: pointer;
   display: flex;
   justify-content: space-around;
   flex-direction: column;

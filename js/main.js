@@ -28,31 +28,6 @@ function get(className) {
 }
 
 
-function openAbout(element) {
-  const aboutItem = element.closest(ABOUT_ITEM);
-  const aboutText = aboutItem.querySelectorAll('p');
-  const aboutTitle = aboutItem.querySelector('h3').innerHTML;
-  const aboutImg = aboutItem.querySelector('img');
-
-  get('body').classList.add('overlaid');
-  get(ABOUT_DETAIL_TEXT).innerHTML = '';
-  get(ABOUT_DETAIL).classList.add('show');
-  aboutText.forEach(p => {
-    const newP = p.cloneNode(true);
-    newP.classList.remove('sr-only')
-    get(ABOUT_DETAIL_TEXT).appendChild(newP);
-  })
-  get(ABOUT_DETAIL + ' h3').innerHTML = aboutTitle;
-  get(ABOUT_DETAIL_IMG).src = aboutImg.src;
-  get(ABOUT_DETAIL_IMG).alt = aboutImg.alt;
-  get(ABOUT).scrollIntoView({behavior: 'smooth'});
-
-}
-
-function closeAbout() {
-  get('body').classList.remove('overlaid');
-  get(ABOUT_DETAIL).classList.remove('show');
-}
 
 function toggleArtists() {
   if (get(ARTISTS_MORE).innerHTML === 'More') {
@@ -67,9 +42,5 @@ function toggleArtists() {
 
 
 window.addEventListener('load', (event) => {
-  addListener(ABOUT_ITEM, openAbout);
-  addListener(ABOUT_CLOSE, closeAbout);
-  addListener(ABOUT_CLOSE, closeAbout);
   addListener(ARTISTS_MORE, toggleArtists);
-
 })
